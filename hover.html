@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hover</title>
+    
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: black;
+        color: yellow;
+    }
+    h1:hover  {
+        background-color: aqua;
+        color: black;
+        text-decoration: underline;
+        text-transform: lowercase;
+    }
+    div {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+    }
+
+     ul li {
+        width: 200px;
+        height: 200px;
+        border: 2px solid blueviolet;
+        margin: 10px;
+        list-style: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: blueviolet;
+        position: relative;
+     }
+     ul li:before {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: blueviolet;
+        border-radius: 50%;
+        transition: all 0.6s linear;
+        z-index: -1;
+        opacity: 0;
+     }
+
+     ul li:hover:before {
+            transform: scale(0.8);
+            opacity: 1;
+            
+     }
+    ul li:hover i {
+        color: antiquewhite;
+       
+    }
+    
+</style>
+<body>
+    <h1> CSS HOVER EFFECTS </h1>
+    <div>
+        <ul>
+            <li> <i class="fa-brands fa-4x fa-whatsapp"></i> </li>
+            <li> <i class="fa-solid fa-4x fa-plug-circle-plus"></i> </li>
+            <li> <i class="fa-solid fa-4x fa-battery-full"></i></li>
+            <li> <i class="fa-solid  fa-4x fa-volume-high"></i></li>
+            
+        </ul>
+    </div>
+    
+</body>
+</html>
